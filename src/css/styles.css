@@ -30,7 +30,7 @@ img {
   font-family: 'Montserrat', sans-serif;
 }
 
-.search-form {
+.form {
   display: flex;
   justify-content: center;
   gap: 8px;
@@ -68,7 +68,7 @@ img {
   background: #6c8cff;
 }
 
-.img-container {
+.img-list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 6px;
