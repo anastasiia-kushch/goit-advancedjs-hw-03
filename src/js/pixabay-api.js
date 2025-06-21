@@ -1,10 +1,6 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-
-
-const BASE_URL = 'https://pixabay.com/api/';
-const API_KEY = '41741201-12a642cf53882fe64e8e82723';
-
+import { BASE_URL, API_KEY } from './refs';
 
 export const searchImages = query => {
   const url = `${BASE_URL}?key=${API_KEY}&q=${query}&image_type=photo&orientation=horizontal&safesearch=true`;
