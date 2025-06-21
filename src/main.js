@@ -6,21 +6,21 @@ import { spinnerPlay, spinnerStop } from './js/spinner';
 import { searchImages } from './js/pixabay-api';
 import { createMarkUp } from './js/render-functions';
 
-const imgContainer = document.querySelector('.img-container');
-const form = document.querySelector('.search-form');
-const input = document.querySelector('.search-input');
+const imgList = document.querySelector('.img-list');
+const form = document.querySelector('.form');
+const input = document.querySelector('.input');
 
 const handleSubmit = event => {
   event.preventDefault();
   spinnerPlay();
 
   const searchQuery = event.currentTarget.elements.query.value.trim();
-  imgContainer.innerHTML = '';
+  imgList.innerHTML = '';
 
   if (searchQuery !== '') {
     searchImages(searchQuery)
       .then(data => {
-        imgContainer.innerHTML = createMarkUp(data.hits);
+        imgList.innerHTML = createMarkUp(data.hits);
         const lightbox = new SimpleLightbox('.lightbox-link');
         lightbox.refresh();
       })
