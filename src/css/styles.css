@@ -68,7 +68,7 @@ img {
   background: #6c8cff;
 }
 
-.img-list {
+.gallery {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 6px;
